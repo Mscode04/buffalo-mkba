@@ -96,7 +96,7 @@ const EditBuffalo = () => {
       });
 
       setTimeout(() => {
-        navigate(`/buffalo-details/${buffaloId}`);
+        navigate(`/buffalo/${buffaloId}`);
       }, 3000);
     } catch (error) {
       toast.dismiss();

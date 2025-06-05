@@ -88,7 +88,7 @@ const EditExpenses = () => {
 
       setTimeout(() => {
         navigate(`/buffalo/${buffaloId}`);
-      }, 3000);
+      }, 2000);
     } catch (error) {
       toast.dismiss();
       toast.error(`Error: ${error.message}`, {

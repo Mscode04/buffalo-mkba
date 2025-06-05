@@ -144,17 +144,17 @@ const BuffaloDetail = () => {
           onClick={() => navigate(-1)} 
           className="btn btn-outline-primary back-button"
         >
-          <FaArrowLeft className="me-2" /> <span className="d-none d-sm-inline"></span>
+          <FaArrowLeft className="me-2" /><span className="d-none d-sm-inline"></span>
         </button>
         <h2 className="detail-title">
           {buffalo.name || "Buffalo Details"} <span className="id-text">പോത്ത്</span>
         </h2>
         <div className="action-buttons">
           <button 
-            onClick={() => navigate(`/edit-buffalo/${buffaloId}`)}
+            onClick={() => navigate(`/buffalo/${buffaloId}/edit-buffalos`)}
             className="btn btn-outline-secondary edit-button"
           >
-            <FaEdit className="me-1" /> <span className="d-none d-md-inline">Edit</span>
+            <FaEdit className="me-1" /> <span className="d-none d-md-inline">Edit </span>
           </button>
           <button 
             onClick={() => setShowDeleteModal(true)}
@@ -164,7 +164,7 @@ const BuffaloDetail = () => {
           </button>
           {buffalo.weightData ? (
             <Link 
-              to={`/buffalo/${buffaloId}/edit-weight`}
+              to={`/buffalo/${buffaloId}/weight`}
               className="btn btn-outline-info weight-button"
             >
               <FaWeight className="me-1" /> <span className="d-none d-md-inline">Edit Weight</span>
@@ -381,7 +381,7 @@ const BuffaloDetail = () => {
                               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                             ))}
                           </Pie>
-                          <Tooltip formatter={(value) => [`${value} kg`, 'Weight']} />
+                          <Tooltip formatter={(value) => [`${value} kg`, 'W']} />
                           <Legend />
                         </PieChart>
                       </ResponsiveContainer>
@@ -514,7 +514,14 @@ const BuffaloDetail = () => {
           </div>
         </div>
       </div>
-
+          <div className="mb-5">
+            <Link 
+              to={`/buffalodetail/${buffaloId}/`}
+              className="btn btn-warning edit-expenses-btn"
+            >
+               Go to Laptop View
+            </Link>
+          </div>
       {/* Delete Confirmation Modal */}
       {showDeleteModal && (
         <div className="modal-overlay">

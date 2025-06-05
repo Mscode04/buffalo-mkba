@@ -38,7 +38,9 @@ function Home() {
           buffalosData.push({
             id: doc.id,
             ...data,
-            totalExpense
+            totalExpense,
+              shareholders: data.shareholders || []
+            
           });
         });
         
@@ -134,42 +136,7 @@ function Home() {
 
       {/* Main Content */}
       <main className="container-fluid mt-3">
-        {/* Summary Cards */}
-        <div className="row mb-4">
-          <div className="col-md-4 mb-3">
-            <div className="card border-primary h-100">
-              <div className="card-body text-center">
-                <h6 className="text-muted">Total Buffalos</h6>
-                <h3 className="text-primary">{totalBuffalos}</h3>
-              </div>
-            </div>
-          </div>
-          
-          <div className="col-md-4 mb-3">
-            <div className="card border-success h-100">
-              <div className="card-body text-center">
-                <h6 className="text-muted">Total Investment</h6>
-                <h3 className="text-success">
-                  <FaRupeeSign className="me-1" />
-                  {totalInvestment.toLocaleString()}
-                </h3>
-              </div>
-            </div>
-          </div>
-          
-          <div className="col-md-4 mb-3">
-            <div className="card border-info h-100">
-              <div className="card-body text-center">
-                <h6 className="text-muted">Avg. Investment</h6>
-                <h3 className="text-info">
-                  <FaRupeeSign className="me-1" />
-                  {avgInvestment.toLocaleString(undefined, {maximumFractionDigits: 0})}
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-
+      
          {/* Buffalo Grid Container */}
         <div className="mb-4">
           <div className="d-flex justify-content-between align-items-center mb-3">
@@ -207,16 +174,33 @@ function Home() {
                           {buffalo.name || "Unnamed Buffalo"}
                         </h6>
                         <span className="badge bg-primary">
-                          #{buffalo.tagNumber || "N/A"}
+                          {buffalo.tagNumber || "പോത്ത്"}
                         </span>
                       </div>
                       
                       <div className="d-flex align-items-center mt-2">
+                        {/* <span className="fw-bold">ID : {buffalo.buffaloId}</span> */}
+                      </div>
+                      <div className="d-flex align-items-center mt-2">
                         <FaRupeeSign className="text-success me-1" />
                         <span className="fw-bold">{buffalo.totalExpense.toLocaleString()}</span>
                       </div>
+                      <div className="d-flex align-items-center mt-2">
+                         {buffalo.shareholders?.length > 0 && (
+                          <div className="mt-3">
+                            <strong className="small text-muted">Shareholders:</strong>
+                            <ul className="list-unstyled mb-0 mt-1">
+                              {buffalo.shareholders.map((shareholder, index) => (
+                                <li key={index} className="small text-muted">
+                                  • {shareholder.name} 
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
                       
-                      <div className="d-flex justify-content-between mt-3">
+                      {/* <div className="d-flex justify-content-between mt-3">
                         <div className="small text-muted">
                           <FaWeight className="me-1" />
                           {buffalo.weight || "N/A"} kg
@@ -225,13 +209,16 @@ function Home() {
                           <FaCalendarAlt className="me-1" />
                           {new Date(buffalo.registrationDate?.seconds * 1000 || Date.now()).toLocaleDateString()}
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
               ))}
             </div>
           )}
+        </div>
+        <div className="offcanvas-footer p-3 border-top text-center text-muted small">
+          Powered by Neuraq Technologies
         </div>
       </main>
     </div>

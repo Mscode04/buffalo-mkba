@@ -105,7 +105,7 @@ const BuffaloWeight = () => {
 
       setTimeout(() => {
         navigate(`/buffalo/${buffaloId}`);
-      }, 3000);
+      }, 1000);
     } catch (error) {
       toast.dismiss();
       toast.error(`Error: ${error.message}`, {
@@ -130,6 +130,22 @@ const BuffaloWeight = () => {
 
   return (
     <div className="container py-5">
+       <ToastContainer 
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        style={{ zIndex: 9999, marginTop: "70px" }} // Added z-index and margin
+        toastStyle={{
+          fontSize: '16px',
+          padding: '15px',
+        }}
+      />
       <div className="row justify-content-center">
         <div className="col-lg-8">
           <div className="card border-0 shadow">

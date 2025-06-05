@@ -115,7 +115,7 @@ const EditShareholders = () => {
 
       setTimeout(() => {
         navigate(`/buffalo/${buffaloId}`);
-      }, 3000);
+      }, 1000);
     } catch (error) {
       toast.dismiss();
       toast.error(`Error: ${error.message}`, {
