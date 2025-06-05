@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/neuraq-care-mkba-og-001/static/css/main.f26d93de.css",
-    "main.js": "/neuraq-care-mkba-og-001/static/js/main.b568064d.js",
-    "index.html": "/neuraq-care-mkba-og-001/index.html",
-    "main.f26d93de.css.map": "/neuraq-care-mkba-og-001/static/css/main.f26d93de.css.map",
-    "main.b568064d.js.map": "/neuraq-care-mkba-og-001/static/js/main.b568064d.js.map"
+    "main.css": "/buffalo-mkba/static/css/main.020bbafe.css",
+    "main.js": "/buffalo-mkba/static/js/main.ad7fb696.js",
+    "index.html": "/buffalo-mkba/index.html",
+    "main.020bbafe.css.map": "/buffalo-mkba/static/css/main.020bbafe.css.map",
+    "main.ad7fb696.js.map": "/buffalo-mkba/static/js/main.ad7fb696.js.map"
   },
   "entrypoints": [
-    "static/css/main.f26d93de.css",
-    "static/js/main.b568064d.js"
+    "static/css/main.020bbafe.css",
+    "static/js/main.ad7fb696.js"
   ]
 }
