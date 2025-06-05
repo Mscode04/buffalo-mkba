@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/buffalo-mkba/static/css/main.020bbafe.css",
-    "main.js": "/buffalo-mkba/static/js/main.ad7fb696.js",
+    "main.css": "/buffalo-mkba/static/css/main.f26d93de.css",
+    "main.js": "/buffalo-mkba/static/js/main.25579fe0.js",
     "index.html": "/buffalo-mkba/index.html",
-    "main.020bbafe.css.map": "/buffalo-mkba/static/css/main.020bbafe.css.map",
-    "main.ad7fb696.js.map": "/buffalo-mkba/static/js/main.ad7fb696.js.map"
+    "main.f26d93de.css.map": "/buffalo-mkba/static/css/main.f26d93de.css.map",
+    "main.25579fe0.js.map": "/buffalo-mkba/static/js/main.25579fe0.js.map"
   },
   "entrypoints": [
-    "static/css/main.020bbafe.css",
-    "static/js/main.ad7fb696.js"
+    "static/css/main.f26d93de.css",
+    "static/js/main.25579fe0.js"
   ]
 }
